@@ -84,4 +84,5 @@ A simple, yet powerful personal finance assistant designed for students like Pri
 ---
 
 ## 🤗 **Credits**
-Made with 💡 ideas from ChatGPT and love for simplicity! 🌈
+Made with 💡 ideas from ❤️
+
