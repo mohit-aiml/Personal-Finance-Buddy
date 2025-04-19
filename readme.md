@@ -60,7 +60,7 @@ A simple, yet powerful personal finance assistant designed for students like Pri
 ### Frontend:
 1. Clone the repository:
     ```bash
-    git clone <repo-url>
+    git clone https://github.com/mohit-aiml/Personal-Finance-Buddy.git
     ```
 2. Open `index.html` in your browser.
 
