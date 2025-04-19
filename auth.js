@@ -2,6 +2,7 @@ const loginForm = document.getElementById('login-form');
 const signupForm = document.getElementById('signup-form');
 const showSignup = document.getElementById('show-signup');
 const showLogin = document.getElementById('show-login');
+const logoutButton = document.getElementById('logout-button');
 
 // Toggle forms
 showSignup.addEventListener('click', () => {
@@ -43,4 +44,11 @@ loginForm.addEventListener('submit', e => {
   } else {
     alert('Invalid email or password!');
   }
+});
+
+// Logout functionality
+logoutButton.addEventListener('click', () => {
+  localStorage.removeItem('loggedInUser');
+  authSection.classList.remove('hidden');
+  dashboardSection.classList.add('hidden');
 });
