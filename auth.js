@@ -3,6 +3,8 @@ const signupForm = document.getElementById('signup-form');
 const showSignup = document.getElementById('show-signup');
 const showLogin = document.getElementById('show-login');
 const logoutButton = document.getElementById('logout-button');
+const authSection = document.getElementById('auth-section');
+const dashboardSection = document.getElementById('dashboard-section');
 
 // Toggle forms
 showSignup.addEventListener('click', () => {
@@ -15,7 +17,7 @@ showLogin.addEventListener('click', () => {
   loginForm.classList.remove('hidden');
 });
 
-// Signup: Save user credentials in localStorage (demo only)
+// Signup: Save user credentials in localStorage
 signupForm.addEventListener('submit', e => {
   e.preventDefault();
   const email = document.getElementById('signup-email').value.trim().toLowerCase();
@@ -40,7 +42,8 @@ loginForm.addEventListener('submit', e => {
   const storedPassword = localStorage.getItem('user_' + email);
   if (storedPassword && storedPassword === password) {
     localStorage.setItem('loggedInUser', email); // Mark user as logged in
-    window.location.href = 'dashboard.html'; // Redirect to dashboard
+    authSection.classList.add('hidden');
+    dashboardSection.classList.remove('hidden');
   } else {
     alert('Invalid email or password!');
   }

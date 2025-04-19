@@ -8,15 +8,10 @@
 }
 
 body {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  position: relative;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
 }
 
 h1, h2 {
@@ -103,6 +98,34 @@ h2 {
   display: none;
 }
 
+form {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
 header.user-header {
   width: 100%;
   max-width: 900px;
@@ -150,6 +173,18 @@ ul#transaction-list li.income {
 
 ul#transaction-list li.expense {
   background-color: rgba(220, 53, 69, 0.7); /* red */
+}
+
+table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
 }
 
 section {
