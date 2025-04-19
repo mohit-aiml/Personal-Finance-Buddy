@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Finance Buddy - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lottie Player CDN -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <!-- Finance animated background -->
+  <lottie-player 
+    src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json"
+    background="transparent"
+    speed="1"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; opacity: 0.15;"
+    loop
+    autoplay>
+  </lottie-player>
+
+  <!-- Stylish site header -->
+  <header class="site-header">
+    <h1 class="fancy-title">Finance Buddy</h1>
+  </header>
+
+  <header class="user-header">
+    <h2>Welcome, <span id="user-email"></span></h2>
+    <button id="logout-btn">Logout</button>
+  </header>
+
+  <section class="transaction-form">
+    <h2>Add Transaction</h2>
+    <form id="transaction-form">
+      <input type="text" id="name" placeholder="Transaction Name" required />
+      <input type="number" id="amount" placeholder="Amount (₹)" required min="0.01" step="0.01" />
+      <select id="type" required>
+        <option value="" disabled selected>Select Type</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <select id="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="needs">Needs</option>
+        <option value="wants">Wants</option>
+        <option value="unnecessary">Unnecessary Wants</option>
+        <option value="savings">Savings</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <section class="summary">
+    <h2>Summary</h2>
+    <p>Total Income: ₹<span id="total-income">0</span></p>
+    <p>Total Expenses: ₹<span id="total-expenses">0</span></p>
+    <p>Balance: ₹<span id="balance">0</span></p>
+  </section>
+
+  <section class="transactions-list">
+    <h2>Transactions</h2>
+    <ul id="transaction-list"></ul>
+  </section>
+
+  <section class="chart-section">
+    <h2>Expense Distribution</h2>
+    <canvas id="expenseChart" width="400" height="400"></canvas>
+  </section>
+
+  <section class="analysis">
+    <h2>Analysis & Tips</h2>
+    <p id="analysis-text">Add some transactions to see your spending habits and tips.</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
