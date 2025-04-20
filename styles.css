@@ -1,0 +1,220 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Stylish site header */
+.site-header {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  z-index: 10;
+  position: relative;
+}
+
+.fancy-title {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #4caf50, #2196f3, #ffeb3b, #f44336);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(60,60,60,0.15);
+}
+
+/* Auth container */
+.auth-container, .transaction-form, .summary, .transactions-list, .analysis, .chart-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  z-index: 10;
+  position: relative;
+}
+
+.auth-form input, .auth-form button,
+#transaction-form input, #transaction-form select, #transaction-form button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.auth-form button, #transaction-form button {
+  background: #6a11cb;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.auth-form button:hover, #transaction-form button:hover {
+  opacity: 0.9;
+}
+
+.auth-form p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.auth-form span {
+  color: #ffd700;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+header.user-header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  z-index: 10;
+  position: relative;
+}
+
+#logout-btn {
+  background: #ff416c;
+  background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#logout-btn:hover {
+  opacity: 0.9;
+}
+
+ul#transaction-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+ul#transaction-list li {
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+ul#transaction-list li.income {
+  background-color: rgba(40, 167, 69, 0.7); /* green */
+}
+
+ul#transaction-list li.expense {
+  background-color: rgba(220, 53, 69, 0.7); /* red */
+}
+
+table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+section {
+  margin: 20px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .auth-container, .transaction-form, .summary, .transactions-list, .analysis, .chart-section {
+    max-width: 100%;
+  }
+
+  .fancy-title {
+    font-size: 2rem;
+  }
+}
