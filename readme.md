@@ -42,22 +42,12 @@ A simple, yet powerful personal finance assistant designed for students like Pri
 ---
 
 ## 🛠️ **Project Setup**
-### Frontend:
+### setUp:
 1. Clone the repository:
     ```bash
-    git clone <repo-url>
+    git clone https://github.com/mohit-aiml/Personal-Finance-Tracker.git
     ```
 2. Open `index.html` in your browser.
-
-### Backend:
-1. Install Node.js and required libraries:
-    ```bash
-    npm install express body-parser
-    ```
-2. Start the server:
-    ```bash
-    node server.js
-    ```
 
 ---
 
@@ -69,4 +59,4 @@ A simple, yet powerful personal finance assistant designed for students like Pri
 ---
 
 ## 🤗 **Credits**
- made With ❤️ SyntaX team -
+ made With ❤️ by team SyntaX -
