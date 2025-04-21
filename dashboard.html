@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Finance Buddy - Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="smstyle.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Lottie Player CDN -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <!-- Finance animated background -->
+  <lottie-player 
+    src="https://assets10.lottiefiles.com/packages/lf20_1pxqjqps.json"
+    background="transparent"
+    speed="1"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; opacity: 0.15;"
+    loop
+    autoplay>
+  </lottie-player>
+
+  <nav>
+    <div class="logo">Finance Tracker</div>
+    <ul>
+      <a href="#navHome"><li>Home</li></a>
+      <a href="#navTransactions"><li>Transactions</li></a>
+      <a href="#navChart"><li>Mind chart</li></a>
+      <a href="#navAnalysis"><li>Analysis</li></a>
+    </ul>
+    <div class="smlogout">
+      <i class="fa-regular fa-user"></i>
+    </div>
+    <div class="floatingLogout">
+      <h2>Visit again! <span id="smidname"></span></h2>
+      <button id="logout-btn">Logout <i class="fa-solid fa-right-from-bracket"></i></button>
+    </div>
+  </nav>
+  <!-- <header class="user-header">
+  </header> -->
+<div class="dashboardSection">
+  <div class="smlook">
+    <div class="smimglogo">
+      <h2 class="smSpc">Welcome ! <span id="user-email" class="smSpc"></span>🖐️</h2>
+      <img src="src/transaction.png">
+      <div class="summary">
+        <h2>Summary</h2>
+        <p>Total Income: ₹<span id="total-income">0</span></p>
+        <p>Total Expenses: ₹<span id="total-expenses">0</span></p>
+        <p>Balance: ₹<span id="balance">0</span></p>
+      </div>
+    </div>
+  <section class="transaction-form" id="navHome">
+    <h2>Add Transaction</h2>
+    <form id="transaction-form">
+      <input type="text" id="name" placeholder="Transaction Name" required />
+      <input type="number" id="amount" placeholder="Amount (₹)" required min="0.01" step="0.01" />
+      <select id="type" required>
+        <option value="" disabled selected>Select Type</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <select id="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="needs">Needs</option>
+        <option value="wants">Wants</option>
+        <option value="unnecessary">Unnecessary Wants</option>
+        <option value="savings">Savings</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+    <img src="src/world.png">
+    
+  </section>
+</div>
+
+
+  <section class="transactions-list" id="navTransactions">
+    <h2>Transactions</h2>
+    <ul id="transaction-list" style="color: #fff;"></ul>
+  </section>
+
+  <section class="chart-section" id="navChart">
+    <h2>Expense Distribution</h2>
+    <canvas id="expenseChart" width="400" height="400"></canvas>
+  </section>
+
+  <section class="analysis" id="navAnalysis">
+    <h2>Analysis & Tips</h2>
+    <p id="analysis-text">Add some transactions to see your spending habits and tips.</p>
+  </section>
+
+</div>
+<script src="script.js"></script>
+<script src="smscript.js"></script>
+</body>
+</html>

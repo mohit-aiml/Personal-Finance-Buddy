@@ -1,0 +1,151 @@
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #328E6E, #67AE6E);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  h1, h2 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Stylish site header */
+  .site-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    z-index: 10;
+    position: relative;
+  }
+  
+  /* Auth container */
+  .auth-container, .transaction-form, .summary, .transactions-list, .analysis, .chart-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 400px;
+    /* box-shadow: 0 2px 14px 0 rgba(31, 38, 135, 0.37); */
+    z-index: 10;
+    position: relative;
+    color: #328E6E;
+  }
+  
+  .auth-form input, .auth-form button,
+  #transaction-form input, #transaction-form select, #transaction-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid;
+  }
+  
+  .auth-form button, #transaction-form button {
+    background: #6a11cb;
+    background: linear-gradient(135deg, #328E6E 0%, #67AE6E 100%);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .auth-form button:hover, #transaction-form button:hover {
+    opacity: 0.9;
+  }
+  
+  .auth-form p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .auth-form span {
+    color: #328E6E;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  header.user-header {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 10;
+    position: relative;
+  }
+  
+  #logout-btn {
+    background: #ff416c;
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  #logout-btn:hover {
+    opacity: 0.9;
+  }
+  
+  ul#transaction-list {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  
+  ul#transaction-list li {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  ul#transaction-list li.income {
+    background-color: rgba(40, 167, 69, 0.7); /* green */
+  }
+  
+  ul#transaction-list li.expense {
+    background-color: rgba(220, 53, 69, 0.7); /* red */
+  }
+  
+  /* Responsive */
+  @media (max-width: 450px) {
+    .auth-container, .transaction-form, .summary, .transactions-list, .analysis, .chart-section {
+      max-width: 100%;
+    }
+  
+    .fancy-title {
+      font-size: 2rem;
+    }
+  }
